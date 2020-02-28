@@ -6,8 +6,6 @@ var logger = require('morgan');
 var fileUpload = require('express-fileupload');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var ocrRouter = require('./routes/ocr');
 
 var app = express();
 
@@ -20,7 +18,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(fileUpload());
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/ocr', ocrRouter);
 
 module.exports = app;

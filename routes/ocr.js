@@ -5,7 +5,7 @@ var textract = require('textract');
 
 /* POST ocr */
 router.post('/', function (req, res) {
-    let file = req.files.foo;
+    let file = req.files.file;
     textract.fromBufferWithName(file.name, file.data, function (error, text) {
         if (error != null) {
             res.send(error);

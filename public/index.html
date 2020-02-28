@@ -1,13 +1,16 @@
 <html>
 
 <head>
-  <title>Express</title>
+  <title>Textract test</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
+  <h1>Textract test</h1>
+  <form action="/ocr" method="post" enctype="multipart/form-data">
+    <input name="file" type="file" />
+    <input type="submit" value="Upload" name="submit">
+  </form>
 </body>
 
 </html>

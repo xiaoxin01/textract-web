@@ -1,4 +1,8 @@
 FROM node:12.14.0-alpine3.9 AS nodeBuild
+
+# add antiword to support .doc file
+RUN apt add antiword
+
 # add node registry for speed up
 RUN npm config set registry https://registry.npm.taobao.org --global && \
     npm config set disturl https://npm.taobao.org/dist --global
